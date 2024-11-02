@@ -45,7 +45,7 @@ To start the system, launch the main dashboard:
 We welcome contributions! Feel free to open an issue or submit a pull request with your improvements.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License - Non-Commercial (NC) Version. See the LICENSE file for details.
 ## Acknowledgements
 - [TensorFlow](https://www.tensorflow.org/) for machine learning frameworks
 - [OpenCV](https://opencv.org/) for computer vision tasks
