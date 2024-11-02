@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TACSIM Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    TACSIM Dashboard
+  </header>
+
+  <nav>
+    <a href="#main" class="tablink active" onclick="openTab('main')">Main</a>
+    <a href="#livefeed" class="tablink" onclick="openTab('livefeed')">Live Feed</a>
+    <a href="#settings" class="tablink" onclick="openTab('settings')">Settings</a>
+    <a href="#map" class="tablink" onclick="openTab('map')">Map</a>
+  </nav>
+
+  <div class="content">
+    <!-- Main Tab -->
+    <div id="main" class="tab-content active">
+      <h2>Active Game</h2>
+      <div id="playerInputs">
+        <label for="playerName">Player Name:</label>
+        <input list="playerHistory" type="text" id="playerName" placeholder="Enter player name">
+        <datalist id="playerHistory">
+          <option value="Fabian">
+          <option value="Anna">
+          <option value="John">
+        </datalist>
+        <label for="beaconSelect">Assign Beacon:</label>
+        <select id="beaconSelect">
+          <option value="">None</option>
+          <option value="Beacon 1">Beacon 1</option>
+          <option value="Beacon 2">Beacon 2</option>
+          <option value="Beacon 3">Beacon 3</option>
+        </select>
+      </div>
+
+      <label for="mode">Mode:</label>
+      <select id="mode" onchange="checkMode()">
+        <option value="single">Single</option>
+        <option value="coop">Coop</option>
+      </select>
+
+      <div id="playerList"></div>
+
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button onclick="startGame()">Start Game</button>
+
+      <h3>Live Timer</h3>
+      <p id="liveTimer">00:00</p>
+
+      <h3>Game History</h3>
+      <table>
+        <tr><th>Player Name</th><th>Time</th><th>Mode</th><th>Difficulty</th><th>Result</th></tr>
+        <tbody id="historyTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Additional Tabs for Live Feed, Settings, Map -->
+    <div id="livefeed" class="tab-content">
+      <h2>Live Feed</h2>
+      <div id="streams">
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <button onclick="initializeSystem()">Initialize System</button>
+      <h3>Active Connections</h3>
+      <ul id="deviceList"></ul>
+    </div>
+
+    <div id="map" class="tab-content">
+      <h2>Position Map</h2>
+      <div id="mapContainer">
+        <p>Map functionality is under development.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/mqtt.js"></script>
+  <script src="js/websocket.js"></script>
+</body>
+</html>

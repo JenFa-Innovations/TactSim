@@ -1,0 +1,78 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ddd;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.5em;
+}
+nav {
+  display: flex;
+  background-color: #444;
+  padding: 10px;
+  justify-content: space-around;
+}
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+nav a.active {
+  background-color: #555;
+  border-radius: 5px;
+}
+.content {
+  padding: 20px;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+button {
+  background-color: #5a9;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #7ab;
+}
+input, select {
+  padding: 8px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ddd;
+  width: 100%;
+  margin-bottom: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #555;
+}
+#playerList div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#playerList {
+  margin-top: 10px;
+}
