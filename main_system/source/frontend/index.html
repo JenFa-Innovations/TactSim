@@ -66,7 +66,7 @@
       </table>
     </div>
 
-    <!-- Additional Tabs for Live Feed, Settings, Map -->
+    <!-- Live Feed Tab -->
     <div id="livefeed" class="tab-content">
       <h2>Live Feed</h2>
       <div id="streams">
@@ -74,18 +74,31 @@
       </div>
     </div>
 
+    <!-- Settings Tab -->
     <div id="settings" class="tab-content">
       <h2>Settings</h2>
+      <!-- Wi-Fi button added here in the top-right position -->
+      <button onclick="scanWiFiNetworks()" style="float: right;">Wi-Fi</button>
       <button onclick="initializeSystem()">Initialize System</button>
       <h3>Active Connections</h3>
       <ul id="deviceList"></ul>
     </div>
 
+    <!-- Map Tab -->
     <div id="map" class="tab-content">
       <h2>Position Map</h2>
       <div id="mapContainer">
         <p>Map functionality is under development.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Wi-Fi Modal for selecting networks -->
+  <div id="wifiModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeWiFiModal()">&times;</span>
+      <h2>Select Wi-Fi Network</h2>
+      <div id="wifiList"></div>
     </div>
   </div>
 
